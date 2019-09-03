@@ -8,11 +8,11 @@ const postsQuery = `{
           }
           frontmatter {  
             title
-            background          
-            category
             date_timestamp: date
             date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
             description
+            category
+            background                     
           }  
           excerpt(pruneLength: 5000)        
         }
@@ -30,14 +30,14 @@ const flatten = arr =>
     ...rest,
   }))
 
+const settings = { attributesToSnippet: [`excerpt:20`] }
+
 const queries = [
   {
     query: postsQuery,
     transformer: ({ data }) => flatten(data.posts.edges),
-    indexName: "Posts",
-    settings: {
-      attributesToSnippet: ["excerpt:20"],
-    },
+    indexName: `Posts`,
+    settings,
   },
 ]
 
