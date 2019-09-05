@@ -1,11 +1,14 @@
 import React from "react"
 import Layout from "../../components/Layout"
 import SEO from "../../components/seo"
+import * as S from "../../components/Post/styled"
 
 const AboutPage = () => (
   <Layout>
     <SEO title="About" />
-    <h1>About Page</h1>
+    <S.PostHeader>
+      <S.PostTitle>Em Desenvolvimento</S.PostTitle>
+    </S.PostHeader>
   </Layout>
 )
 
