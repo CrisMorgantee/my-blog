@@ -146,7 +146,7 @@ console.log(motorcycle)
 
 Definimos a variável antes da função, dentro do bloco da função atribuímos um valor para a variável e da mesma maneira colocamos um console.log fora da função, o que isso nos retorna?
 
-![](/assets/img/console8.png)
+![](/assets/img/console7.png)
 
 Isso acontece porque definimos a variável de forma global e mesmo que uma função, por exemplo, atribua um valor a essa variável, conseguimos chamar sem problema. É um pouco complicado e temos que tomar cuidado, porque se tivermos variáveis de mesmo nome definidas como globais e outras funções estiverem alterando essa variável, podemos fazer uma grande bagunça, também por isso foram implementados _let_ e _const_ para melhorar a forma de declararmos uma variável de acordo com a necessidade do projeto.
 
@@ -179,7 +179,7 @@ var motorcycle = 'Harley Davidson';
 
 Note que não ocorre erro no console:
 
-![](/assets/img/console10.png)
+![](/assets/img/console9.png)
 
 Agora vamos mudar um pouquinho nosso código:
 
