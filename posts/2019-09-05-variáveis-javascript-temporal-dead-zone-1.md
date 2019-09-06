@@ -79,7 +79,7 @@ Nesse caso sim retorna erro dizendo que não podemos redeclarar a _const_:
 
 Então, é importante entendermos que a variável declarada com const não conseguimos redeclarar, mas, a propriedade do objeto declarado com const sim podemos reescrever, sendo assim não podemos dizer que ela é imutável.
 
-Para podermos dizer que uma variável é imutável poderíamos utilizar o _**Object.freeze**_.
+Para podermos dizer que uma variável é imutável poderíamos utilizar o **_Object.freeze_**.
 
 ```javascript
 const letter = { 
@@ -195,11 +195,57 @@ console.log(motorcycle)
 
 Repare que colocamos um console.log antes do bloco do let, um console.log dentro do bloco e outro console.log depois do bloco e também modificamos o valor da variável declarada com let para ‘Custon’. Na teoria, o console.log depois do bloco em que let foi declarado não deveria ter o valor que foi definido dentro do bloco, vamos ver na prática.
 
-
 O resultado foi esse:
 
 ![](/assets/img/console10.png)
 
 Viu só? Foi isso mesmo que aconteceu. A palavra chave let manteve o valor da variável somente no escopo do bloco em que ela foi declarada.
 
+- - -
+
+## Temporal Dead Zone
+
+Zona morta temporal, consiste basicamente em que você não pode acessar uma variável antes que ela tenha sido definida. Mas vamos entender isso e como funciona.
+
+> **Hoisting**
+
+Em JavaScript quando declaramos uma função acontece algo chamado _hoisting_ que significa levantar ou suspender algo, então quando criamos uma variável independente da posição, o que o _hoisting_ faz é colocar essa variável no topo do escopo. Você pode se inteirar mais sobre isso no [mdn](https://developer.mozilla.org/pt-BR/docs/Glossario/Hoisting), [w3](https://www.w3schools.com/js/js_hoisting.asp), … Tendo isso em mente vamos as variáveis.
+
+```javascript
+console.log(auto)
+var auto = 'car';
+```
+
+Definimos uma variável com _var_ mas repare que chamamos ela no console antes de definirmos ela, o que isso nos retorna?
+
+![](/assets/img/console11.png)
+
+Veja que o retorno dela foi como _undefined_. Isso acontece porque as variáveis definidas com _var_, são acessadas somente quando são definidas, antes disso não conseguimos acessar o valor real deles.
+
+Se mudarmos a palavra chave para _const_ ou _let_:
+
+```javascript
+console.log(auto)
+const auto = 'car';
+```
+
+```javascript
+console.log(auto)
+let auto = 'car';
+```
+
+Acontece algo diferente:
+
+![](/assets/img/console12.png)
+
+Agora é um erro de fato e ele quebra o código, nos avisando que não podemos acessar a declaração _let_ e _const_ antes de inicializarmos elas. Ou seja a declaração da variável é _Hoisted_ mas sua inicialização não.
+
+Então, **Temporal Dead Zone** nos ajuda a identificar erros como se o código não estiver rodando na ordem correta, ou uma distração nossa como chamar a variável antes de atribui-la …
+
+Portanto, as variáveis com _let_ e _const_, não sobem com _Hoisting_, o erro já aparece logo de cara rs.
+
 ___
+
+Por hoje era isso galera, fique a vontade para deixar sua opinião e trocarmos uma idéia!
+
+Valeu!
