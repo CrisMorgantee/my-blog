@@ -111,3 +111,4 @@ Temos uma variável _motorcycle_ definida como _Harley Davidson_, no console tem
 ![](/assets/img/console5.png)
 
 Tudo como esperado. Vamos colocar isso agora , dentro de uma function:
+hello
