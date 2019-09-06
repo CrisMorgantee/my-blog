@@ -97,6 +97,8 @@ Agora sim, repare que ele congelou o objeto e ignorou ao tentarmos redefinir _se
 
 Agora nesse caso podemos dizer que é uma variável imutável, pois não conseguimos redeclarar e nem reescrever as suas propriedades.
 
+___
+
 ## var
 
 Variáveis criadas com a palavra chave var, são globais a não ser que sejam criadas dentro de funções. Também chamadas **function scope,** nesse [link](<Variáveis criadas com a palavra chave var, são globais a não ser que sejam criadas dentro de funções. Também chamadas function scope, nesse link você pode ler mais sobre function scopes e block scopes. Vamos aos exemplos:>) você pode ler mais sobre f**unction scopes** e **block scopes.** Vamos aos exemplos:
@@ -129,3 +131,23 @@ console.log(motorcycle)
 O resultado é esse:
 
 ![](/assets/img/console6.png)
+
+Pois é, o primeiro resultado funcionou como esperado, mas o _console.log_ que está fora do escopo do bloco da função retornou um erro dizendo que _motorcycle_ não está definida. Mas, olha que interessante:
+
+```javascript
+var motorcycle
+function motorcycles() {
+  var motorcycle = 'Harley Davidson';
+  console.log(motorcycle)
+}
+motorcyles();
+console.log(motorcycle)
+```
+
+Definimos a variável antes da função, dentro do bloco da função atribuímos um valor para a variável e da mesma maneira colocamos um console.log fora da função, o que isso nos retorna?
+
+![](/assets/img/console7.png)
+
+Isso acontece porque definimos a variável de forma global e mesmo que uma função, por exemplo, atribua um valor a essa variável, conseguimos chamar sem problema. É um pouco complicado e temos que tomar cuidado, porque se tivermos variáveis de mesmo nome definidas como globais e outras funções estiverem alterando essa variável, podemos fazer uma grande bagunça, também por isso foram implementados _let_ e _const_ para melhorar a forma de declararmos uma variável de acordo com a necessidade do projeto.
+
+- - -
