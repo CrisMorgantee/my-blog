@@ -79,7 +79,7 @@ Nesse caso sim retorna erro dizendo que não podemos redeclarar a _const_:
 
 Então, é importante entendermos que a variável declarada com const não conseguimos redeclarar, mas, a propriedade do objeto declarado com const sim podemos reescrever, sendo assim não podemos dizer que ela é imutável.
 
-Para podermos dizer que uma variável é imutável poderíamos utilizar o _**Object.freeze**_.
+Para podermos dizer que uma variável é imutável poderíamos utilizar o **_Object.freeze_**.
 
 ```javascript
 const letter = { 
@@ -115,7 +115,7 @@ motorcyles();
 
 No console temos:
 
-![](/assets/img/console6.png)
+![](/assets/img/console5.png)
 
 Mas veja só, adicionando um _console.log_ fora da _function_ :
 
