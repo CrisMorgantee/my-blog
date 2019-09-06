@@ -79,7 +79,7 @@ Nesse caso sim retorna erro dizendo que não podemos redeclarar a _const_:
 
 Então, é importante entendermos que a variável declarada com const não conseguimos redeclarar, mas, a propriedade do objeto declarado com const sim podemos reescrever, sendo assim não podemos dizer que ela é imutável.
 
-Para podermos dizer que uma variável é imutável poderíamos utilizar o _**Object.freeze**_.
+Para podermos dizer que uma variável é imutável poderíamos utilizar o **_Object.freeze_**.
 
 ```javascript
 const letter = { 
@@ -101,14 +101,31 @@ Agora nesse caso podemos dizer que é uma variável imutável, pois não consegu
 
 Variáveis criadas com a palavra chave var, são globais a não ser que sejam criadas dentro de funções. Também chamadas **function scope,** nesse [link](<Variáveis criadas com a palavra chave var, são globais a não ser que sejam criadas dentro de funções. Também chamadas function scope, nesse link você pode ler mais sobre function scopes e block scopes. Vamos aos exemplos:>) você pode ler mais sobre f**unction scopes** e **block scopes.** Vamos aos exemplos:
 
+Temos uma variável _motorcycle_ definida como _Harley Davidson_.
+
 ```javascript
-var motorcycle = 'Harley Davidson';
-console.log(motorcycle)
+function motorcycles() {
+  var motorcycle = 'Harley Davidson';
+  console.log(motorcycle)
+}
+motorcyles();
 ```
 
-Temos uma variável _motorcycle_ definida como _Harley Davidson_, no console temos:
+No console temos:
 
 ![](/assets/img/console5.png)
 
-Tudo como esperado. Vamos colocar isso agora , dentro de uma function:
-hello
+Mas veja só, adicionando um _console.log_ fora da _function_ :
+
+```javascript
+function motorcycles() {
+  var motorcycle = 'Harley Davidson';
+  console.log(motorcycle)
+}
+motorcyles();
+console.log(motorcycle)
+```
+
+O resultado é esse:
+
+![](/assets/img/console6.png)
