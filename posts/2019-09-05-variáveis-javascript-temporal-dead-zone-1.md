@@ -79,7 +79,7 @@ Nesse caso sim retorna erro dizendo que não podemos redeclarar a _const_:
 
 Então, é importante entendermos que a variável declarada com const não conseguimos redeclarar, mas, a propriedade do objeto declarado com const sim podemos reescrever, sendo assim não podemos dizer que ela é imutável.
 
-Para podermos dizer que uma variável é imutável poderíamos utilizar o **_Object.freeze_**.
+Para podermos dizer que uma variável é imutável poderíamos utilizar o _**Object.freeze**_.
 
 ```javascript
 const letter = { 
@@ -97,7 +97,7 @@ Agora sim, repare que ele congelou o objeto e ignorou ao tentarmos redefinir _se
 
 Agora nesse caso podemos dizer que é uma variável imutável, pois não conseguimos redeclarar e nem reescrever as suas propriedades.
 
-___
+- - -
 
 ## var
 
@@ -151,3 +151,55 @@ Definimos a variável antes da função, dentro do bloco da função atribuímos
 Isso acontece porque definimos a variável de forma global e mesmo que uma função, por exemplo, atribua um valor a essa variável, conseguimos chamar sem problema. É um pouco complicado e temos que tomar cuidado, porque se tivermos variáveis de mesmo nome definidas como globais e outras funções estiverem alterando essa variável, podemos fazer uma grande bagunça, também por isso foram implementados _let_ e _const_ para melhorar a forma de declararmos uma variável de acordo com a necessidade do projeto.
 
 - - -
+
+## let
+
+_let_ é muito útil quando queremos utilizar variáveis uma única vez dentro daquele escopo e não queremos correr o risco de ter essas variáveis reescritas fora desse escopo, também muito útil quando utilizamos códigos de terceiros ou muito grandes.
+
+Uma das diferenças da palavra chave _let_ em relação a _var_, é que _let_ não deixa criar variáveis de mesmo nome dentro de um mesmo escopo:
+
+```javascript
+var motorcycle = 'Harley Davidson';
+let motorcycle = 'Harley Davidson';
+```
+
+Se tentarmos definir um mesmo nome de variável temos um erro dizendo que estamos tentando redeclarar a variável _motorcycles_:
+
+![](/assets/img/console8.png)
+
+No entanto se colocarmos _let_ dentro de um bloco não temos mais o erro:
+
+```javascript
+var motorcycle = 'Harley Davidson';
+{
+  let motorcycle = 'Custon';
+  console.log(motorcycle)
+}
+```
+
+Note que não ocorre erro no console:
+
+![](/assets/img/console9.png)
+
+Agora vamos mudar um pouquinho nosso código:
+
+```javascript
+var motorcycle = 'Harley Davidson';
+console.log(motorcycle)
+{
+  let motorcycle = 'Custon';
+  console.log(motorcycle)
+}
+console.log(motorcycle)
+```
+
+Repare que colocamos um console.log antes do bloco do let, um console.log dentro do bloco e outro console.log depois do bloco e também modificamos o valor da variável declarada com let para ‘Custon’. Na teoria, o console.log depois do bloco em que let foi declarado não deveria ter o valor que foi definido dentro do bloco, vamos ver na prática.
+
+
+O resultado foi esse:
+
+![](/assets/img/console10.png)
+
+Viu só? Foi isso mesmo que aconteceu. A palavra chave let manteve o valor da variável somente no escopo do bloco em que ela foi declarada.
+
+___
