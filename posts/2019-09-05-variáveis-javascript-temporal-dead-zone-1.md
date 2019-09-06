@@ -79,7 +79,7 @@ Nesse caso sim retorna erro dizendo que não podemos redeclarar a _const_:
 
 Então, é importante entendermos que a variável declarada com const não conseguimos redeclarar, mas, a propriedade do objeto declarado com const sim podemos reescrever, sendo assim não podemos dizer que ela é imutável.
 
-Para podermos dizer que uma variável é imutável poderíamos utilizar o **_Object.freeze_**.
+Para podermos dizer que uma variável é imutável poderíamos utilizar o _**Object.freeze**_.
 
 ```javascript
 const letter = { 
@@ -115,7 +115,7 @@ motorcyles();
 
 No console temos:
 
-![](/assets/img/console5.png)
+![](/assets/img/console6.png)
 
 Mas veja só, adicionando um _console.log_ fora da _function_ :
 
@@ -146,7 +146,7 @@ console.log(motorcycle)
 
 Definimos a variável antes da função, dentro do bloco da função atribuímos um valor para a variável e da mesma maneira colocamos um console.log fora da função, o que isso nos retorna?
 
-![](/assets/img/console7.png)
+![](/assets/img/console8.png)
 
 Isso acontece porque definimos a variável de forma global e mesmo que uma função, por exemplo, atribua um valor a essa variável, conseguimos chamar sem problema. É um pouco complicado e temos que tomar cuidado, porque se tivermos variáveis de mesmo nome definidas como globais e outras funções estiverem alterando essa variável, podemos fazer uma grande bagunça, também por isso foram implementados _let_ e _const_ para melhorar a forma de declararmos uma variável de acordo com a necessidade do projeto.
 
@@ -179,7 +179,7 @@ var motorcycle = 'Harley Davidson';
 
 Note que não ocorre erro no console:
 
-![](/assets/img/console9.png)
+![](/assets/img/console10.png)
 
 Agora vamos mudar um pouquinho nosso código:
 
@@ -244,7 +244,7 @@ Então, **Temporal Dead Zone** nos ajuda a identificar erros como se o código n
 
 Portanto, as variáveis com _let_ e _const_, não sobem com _Hoisting_, o erro já aparece logo de cara rs.
 
-___
+- - -
 
 Por hoje era isso galera, fique a vontade para deixar sua opinião e trocarmos uma idéia!
 
