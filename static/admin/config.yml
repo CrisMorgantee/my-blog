@@ -2,7 +2,7 @@ backend:
   name: github
   repo: CrisMorgantee/my-blog
   branch: master
-  site_domain: https://cristiano-morgante.netlify.com/
+  site_domain: https://cristianomorgante.netlify.com/
 
 publish_mode: editorial_workflow
 media_folder: "static/assets/img"
