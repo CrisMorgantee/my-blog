@@ -15,10 +15,11 @@ Acesse o diretório:
 ```
 cd /usr/share/applications
 ```
-Como administrador abra o arquivo `mimeinfo.cache`
+Como administrador abra o arquivo `mimeinfo.cache`  
 Procure a linha `inode/directory=` 
 
-Provavelmente o arquivo `dde-file-manager.desktop;` não estará como primeira opção, para voltar o `file manager` como padrão para o atalho `super+e` (ou qualquer outro que você definir) basta coloca-lo na primeira posição.  
+Provavelmente o arquivo `dde-file-manager.desktop;` não estará como primeira opção.  
+Para voltar o `file manager` como padrão para o atalho `super+e` (ou qualquer outro que você definir) basta coloca-lo na primeira posição.  
 Assim:
 ```
 inode/directory=dde-file-manager.desktop;'outras-opcoes-aqui;'
