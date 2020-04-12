@@ -153,7 +153,7 @@ background: '#637a91'
 
 **`shortcuts`**  
 
-```js
+```json
 // Place your key bindings in this file to override the defaultsauto[]
 [
   {
@@ -190,7 +190,7 @@ background: '#637a91'
 
 ## Arquivo `.zshrc`
 
-```js
+```shell
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
