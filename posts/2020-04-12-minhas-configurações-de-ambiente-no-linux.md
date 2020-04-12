@@ -10,7 +10,7 @@ background: '#637a91'
 
 
 **`settings.json`**
-```json
+```js
 {
   "breadcrumbs.enabled": true,
   "[css]": {
@@ -153,7 +153,7 @@ background: '#637a91'
 
 **`shortcuts`**  
 
-```
+```js
 // Place your key bindings in this file to override the defaultsauto[]
 [
   {
@@ -190,7 +190,7 @@ background: '#637a91'
 
 ## Arquivo `.zshrc`
 
-```
+```js
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -339,7 +339,7 @@ SPACESHIP_CHAR_SUFFIX=" "
 
 ## Arquivo `.hyper.js`
 
-```
+```js
 // Future versions of Hyper may add additional config options,
 // which will not automatically be merged into this file.
 // See https://hyper.is#cfg for all currently supported options.
