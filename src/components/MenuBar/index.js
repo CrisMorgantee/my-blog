@@ -1,5 +1,5 @@
 // import { UpArrowAlt as Arrow } from "styled-icons/boxicons-regular/UpArrowAlt"
-import { LightBulb } from "@styled-icons/octicons/LightBulb"
+import { Lightbulb } from "@styled-icons/octicons/Lightbulb"
 import React, { useEffect, useState } from "react"
 import { SearchAlt2 as Search } from "styled-icons/boxicons-regular/SearchAlt2"
 import { Grid } from "styled-icons/boxicons-solid/Grid"
@@ -61,7 +61,7 @@ const MenuBar = () => {
           }}
           className={theme}
         >
-          <LightBulb />
+          <Lightbulb />
         </S.MenuBarItem>
         <S.MenuBarItem
           title="Mudar visualização"
