@@ -10,11 +10,11 @@ background: '#7aab13'
 ---
 **Lista opções:**
 
-```sh
+```shell
 efibootmgr
 ```
 
-```sh   
+```shell   
 efibootmgr
    
 BootCurrent: 0002
@@ -28,12 +28,12 @@ Boot0016* USB Storage Device
 
 **Deleta opção:**
 
-```sh
+```shell
 sudo efibootmgr -b <opcao_de_boot> -B
 ```
 
 Substitua `<opcao_de_boot>` pelo número da opção que deseja deletar, por exemplo, se eu fosse deletar o `deepin` a opção seria `2`, o comando ficaria assim:
 
-```sh
+```shell
 sudo efibootmgr -b 2 -B
 ```
