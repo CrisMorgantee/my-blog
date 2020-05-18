@@ -10,11 +10,11 @@ background: '#7aab13'
 ---
 > **Lista opções:**
 
-```shell
+```zsh
  efibootmgr
 ```
 
-```shell   
+```zsh   
  efibootmgr
    
   BootCurrent: 0002
@@ -28,12 +28,12 @@ background: '#7aab13'
 
 > **Deleta opção:**
 
-```shell
+```zsh
 sudo efibootmgr -b <opcao_de_boot> -B
 ```
 
 Substitua `<opcao_de_boot>` pelo número da opção que deseja deletar, por exemplo, se eu fosse deletar o `deepin` a opção seria `2`, o comando ficaria assim:
 
-```shell
+```zsh
  sudo efibootmgr -b 2 -B
 ```
