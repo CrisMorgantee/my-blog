@@ -197,9 +197,14 @@ background: '#637a91'
 # Path to your oh-my-zsh installation.
 export ZSH="/home/cristiano/.oh-my-zsh"
 
-export ANDROID_HOME=/opt/android-sdk
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export ANDROID_HOME=~/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+export PATH=$PATH:~/android-studio/bin
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -323,7 +328,7 @@ SPACESHIP_PROMPT_ORDER=(
 )
 SPACESHIP_USER_SHOW=always
 SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_CHAR_SYMBOL="~@"
+SPACESHIP_CHAR_SYMBOL="||>"
 SPACESHIP_CHAR_SUFFIX=" " 
 
 
@@ -333,6 +338,7 @@ SPACESHIP_CHAR_SUFFIX=" "
 # SPACESHIP_DIR_SHOW=true
 # SPACESHIP_GIT_BRANCH_SHOW=true
 #fi
+
 
 ```
 ---
