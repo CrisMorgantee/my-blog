@@ -10,30 +10,45 @@ background: '#637a91'
 
 
 **`settings.json`**
-```js
+```json
 {
   "breadcrumbs.enabled": true,
+  "colorize.languages": [
+    "css",
+    "sass",
+    "scss",
+    "less",
+    "postcss",
+    "sss",
+    "stylus",
+    "xml",
+    "svg",
+    "javascript"
+  ],
   "[css]": {
     "editor.fontLigatures": false
   },
   "debug.console.fontFamily": "default",
-  "discord.enable": true,
+  //"discord.enable": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.organizeImports": true
   },
   "editor.cursorStyle": "block",
   "editor.cursorWidth": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.fontSize": 16,
   "editor.fontFamily": "'Fira Code Retina'",
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
+  "editor.formatOnPaste": false,
   "editor.lineHeight": 24,
   "editor.parameterHints.enabled": false,
   "editor.renderLineHighlight": "gutter",
-  "editor.renderIndentGuides": false,
-  "editor.rulers": [80, 120],
+  "editor.rulers": [95, 120],
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "emmet.includeLanguages": {
@@ -110,13 +125,16 @@ background: '#637a91'
     "**/.settings": true,
     "**/.factorypath": true
   },
-  "workbench.sideBar.location": "left"
+  "workbench.sideBar.location": "left",
+  "php.validate.executablePath": "/usr/bin/php",
+  "sync.gist": "80e719cf54884f8577b264b56d5efc22"
 }
 
 ```
 
 **`plugins`**
 
+- [Advanced New File](https://marketplace.visualstudio.com/items?itemName=patbenatar.advanced-new-file)
 - [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
 - [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
 - [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
@@ -126,6 +144,7 @@ background: '#637a91'
 - [DotEnv](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
 - [Dracula Oficial](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula)
 - [Edge Template Suport](https://marketplace.visualstudio.com/items?itemName=luongnd.edge)
+- [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
 - [EditorConfig for Vs Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 - [ES7 React/Redux/GraphQl/ReactNative Snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
@@ -154,37 +173,41 @@ background: '#637a91'
 **`shortcuts`**  
 
 ```json
-// Place your key bindings in this file to override the defaultsauto[]
+// Place your "key" bindings in this file to override the defaultsauto[]
 [
   {
-    key: "ctrl+alt+right",
-    command: "editor.emmet.action.nextEditPoint"
+    "key": "ctrl+alt+right",
+    "command": "editor.emmet.action.nextEditPoint"
   },
   {
-    key: "ctrl+alt+left",
-    command: "editor.emmet.action.prevEditPoint"
+    "key": "ctrl+alt+left",
+    "command": "editor.emmet.action.prevEditPoint"
   },
   {
-    key: "ctrl+alt+down",
-    command: "editor.action.copyLinesDownAction",
-    when: "editorTextFocus && !editorReadonly"
+    "key": "ctrl+alt+down",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
   },
   {
-    key: "ctrl+shift+alt+down",
-    command: "-editor.action.copyLinesDownAction",
-    when: "editorTextFocus && !editorReadonly"
+    "key": "ctrl+shift+alt+down",
+    "command": "-editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
   },
   {
-    key: "ctrl+alt+up",
-    command: "editor.action.copyLinesUpAction",
-    when: "editorTextFocus && !editorReadonly"
+    "key": "ctrl+alt+up",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
   },
   {
-    key: "ctrl+shift+alt+up",
-    command: "-editor.action.copyLinesUpAction",
-    when: "editorTextFocus && !editorReadonly"
+    "key": "ctrl+shift+alt+up",
+    "command": "-editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+n", // "cmd+n" on mac
+    "command": "extension.advancedNewFile"
   }
-];
+]
 ```
 ---
 
@@ -323,7 +346,7 @@ SPACESHIP_PROMPT_ORDER=(
 )
 SPACESHIP_USER_SHOW=always
 SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_CHAR_SYMBOL="~@"
+SPACESHIP_CHAR_SYMBOL="||>"
 SPACESHIP_CHAR_SUFFIX=" " 
 
 
