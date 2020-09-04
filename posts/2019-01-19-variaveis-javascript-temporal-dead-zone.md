@@ -1,10 +1,12 @@
 ---
 title: Variáveis JavaScript & Temporal Dead Zone
-description: const, var, let… Afinal, quais são as reais diferenças ao criar variáveis comessas palavras chaves.
-date: "2019-01-28 10:19:00"
+description: >-
+  const, var, let… Afinal, quais são as reais diferenças ao criar variáveis com
+  essas palavras chaves.
+date: '2019-01-28 10:19:00'
 thumbnail: /assets/img/js.jpeg
 category: js
-background: "#d6ba32"
+background: '#d6ba32'
 ---
 
 Olá devs,
@@ -76,7 +78,7 @@ Nesse caso sim retorna erro dizendo que não podemos redeclarar a _const_:
 
 ![](/assets/img/console4.png)
 
-Então, é importante entendermos que a variável declarada com const não conseguimos redeclarar, mas, a propriedade do objeto declarado com const sim podemos reescrever, sendo assim não podemos dizer que ela é imutável.
+Então, é importante entendermos que a variável declarada com ```const``` não conseguimos redeclarar, mas, a propriedade do objeto declarado com ```const``` sim podemos reescrever, sendo assim não podemos dizer que ela é imutável.
 
 Para podermos dizer que uma variável é imutável poderíamos utilizar o **_Object.freeze_**.
 
@@ -100,7 +102,7 @@ Agora nesse caso podemos dizer que é uma variável imutável, pois não consegu
 
 ## var
 
-Variáveis criadas com a palavra chave var, são globais a não ser que sejam criadas dentro de funções. Também chamadas **function scope,** nesse [link](<Variáveis criadas com a palavra chave var, são globais a não ser que sejam criadas dentro de funções. Também chamadas function scope, nesse link você pode ler mais sobre function scopes e block scopes. Vamos aos exemplos:>) você pode ler mais sobre f**unction scopes** e **block scopes.** Vamos aos exemplos:
+Variáveis criadas com a palavra chave var, são globais a não ser que sejam criadas dentro de funções. Também chamadas **function scope,** nesse [link](<Variáveis criadas com a palavra chave var, são globais a não ser que sejam criadas dentro de funções. Também chamadas function scope, nesse link você pode ler mais sobre function scopes e block scopes. Vamos aos exemplos:>) você pode ler mais sobre **function scopes** e **block scopes.** Vamos aos exemplos:
 
 Temos uma variável _motorcycle_ definida como _Harley Davidson_.
 
