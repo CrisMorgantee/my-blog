@@ -8,32 +8,48 @@ background: '#637a91'
 ---
 ## Configurando o Visual Studio Code
 
-
 **`settings.json`**
+
+
 ```js
 {
   "breadcrumbs.enabled": true,
+  "colorize.languages": [
+    "css",
+    "sass",
+    "scss",
+    "less",
+    "postcss",
+    "sss",
+    "stylus",
+    "xml",
+    "svg",
+    "javascript"
+  ],
   "[css]": {
     "editor.fontLigatures": false
   },
   "debug.console.fontFamily": "default",
-  "discord.enable": true,
+  //"discord.enable": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.organizeImports": true
   },
   "editor.cursorStyle": "block",
   "editor.cursorWidth": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.fontSize": 16,
   "editor.fontFamily": "'Fira Code Retina'",
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
+  "editor.formatOnPaste": false,
   "editor.lineHeight": 24,
   "editor.parameterHints.enabled": false,
   "editor.renderLineHighlight": "gutter",
-  "editor.renderIndentGuides": false,
-  "editor.rulers": [80, 120],
+  "editor.rulers": [95, 120],
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "emmet.includeLanguages": {
@@ -110,46 +126,48 @@ background: '#637a91'
     "**/.settings": true,
     "**/.factorypath": true
   },
-  "workbench.sideBar.location": "left"
+  "workbench.sideBar.location": "left",
+  "php.validate.executablePath": "/usr/bin/php",
+  "sync.gist": "80e719cf54884f8577b264b56d5efc22"
 }
 
 ```
 
 **`plugins`**
 
-- [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
-- [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
-- [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
-- [Colorize](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize)
-- [Create Files & Folders:On The Go](https://marketplace.visualstudio.com/items?itemName=ritwickdey.create-file-folder)
-- [Discord Presence](https://marketplace.visualstudio.com/items?itemName=icrawl.discord-vscode)
-- [DotEnv](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
-- [Dracula Oficial](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula)
-- [Edge Template Suport](https://marketplace.visualstudio.com/items?itemName=luongnd.edge)
-- [EditorConfig for Vs Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
-- [ES7 React/Redux/GraphQl/ReactNative Snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [Figma](https://marketplace.visualstudio.com/items?itemName=idered.figma)
-- [GraphQl](https://marketplace.visualstudio.com/items?itemName=Prisma.vscode-graphql)
-- [Guides](https://marketplace.visualstudio.com/items?itemName=spywhere.guides)
-- [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag)
-- [Intellisense for CSS clas names in HTML](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion)
-- [Java Dependency Viewer](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-dependency)
-- [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
-- [Java Test Runner](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-test)
-- [Javascript Console Utils](https://marketplace.visualstudio.com/items?itemName=whtouche.vscode-js-console-utils)
-- [Language Support for Java(TM) by Red Hat](https://marketplace.visualstudio.com/items?itemName=redhat.java)
-- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
-- [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
-- [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
-- [Maven For Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-maven)
-- [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
-- [Prettier - Code Formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [Simple React Snippets](https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets)
-- [Styled Components Snippets](https://marketplace.visualstudio.com/items?itemName=jonkwheeler.styled-components-snippets)
-- [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
-- [VsCode Discord](https://marketplace.visualstudio.com/items?itemName=maxerbox.vscode-discord)
-- [VsCode Styled Components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
+* [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
+* [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+* [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
+* [Colorize](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize)
+* [Create Files & Folders:On The Go](https://marketplace.visualstudio.com/items?itemName=ritwickdey.create-file-folder)
+* [Discord Presence](https://marketplace.visualstudio.com/items?itemName=icrawl.discord-vscode)
+* [DotEnv](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
+* [Dracula Oficial](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula)
+* [Edge Template Suport](https://marketplace.visualstudio.com/items?itemName=luongnd.edge)
+* [EditorConfig for Vs Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+* [ES7 React/Redux/GraphQl/ReactNative Snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+* [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+* [Figma](https://marketplace.visualstudio.com/items?itemName=idered.figma)
+* [GraphQl](https://marketplace.visualstudio.com/items?itemName=Prisma.vscode-graphql)
+* [Guides](https://marketplace.visualstudio.com/items?itemName=spywhere.guides)
+* [Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag)
+* [Intellisense for CSS clas names in HTML](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion)
+* [Java Dependency Viewer](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-dependency)
+* [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
+* [Java Test Runner](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-test)
+* [Javascript Console Utils](https://marketplace.visualstudio.com/items?itemName=whtouche.vscode-js-console-utils)
+* [Language Support for Java(TM) by Red Hat](https://marketplace.visualstudio.com/items?itemName=redhat.java)
+* [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+* [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
+* [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+* [Maven For Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-maven)
+* [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
+* [Prettier - Code Formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+* [Simple React Snippets](https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets)
+* [Styled Components Snippets](https://marketplace.visualstudio.com/items?itemName=jonkwheeler.styled-components-snippets)
+* [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
+* [VsCode Discord](https://marketplace.visualstudio.com/items?itemName=maxerbox.vscode-discord)
+* [VsCode Styled Components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
 
 **`shortcuts`**  
 
@@ -186,7 +204,8 @@ background: '#637a91'
   }
 ];
 ```
----
+
+- - -
 
 ## Arquivo `.zshrc`
 
@@ -338,10 +357,9 @@ SPACESHIP_CHAR_SUFFIX=" "
 # SPACESHIP_DIR_SHOW=true
 # SPACESHIP_GIT_BRANCH_SHOW=true
 #fi
-
-
 ```
----
+
+- - -
 
 ## Arquivo `.hyper.js`
 
