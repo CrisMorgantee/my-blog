@@ -12,7 +12,6 @@ background: '#637a91'
 **`settings.json`**
 ```json
 {
-  {   
   /* Editor */
   
   /* CSS */
@@ -36,6 +35,14 @@ background: '#637a91'
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
 
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.hg/store/**": true,
+    "**/vendor/*/**": true
+  },  
+
   /* Explorer */  
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
@@ -49,26 +56,23 @@ background: '#637a91'
   "files.associations": {
     ".babelrc": "json5",
     "*.html": "html",
-    "*.js": "javascript"
+    "*.js": "javascript",
+    ".blade.php": "html",
+    ".tpl": "html"
   },
 
   /* HTML */
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
-
+  
   /* Javascript */
   "javascript.updateImportsOnFileMove.enabled": "never",
-  
-  /* Window */
-  "window.menuBarVisibility": "toggle",
 
-  /* Workbench */
-  "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Dracula",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.editor.labelFormat": "short",
-  "workbench.startupEditor": "newUntitledFile",
+  /* Remote */
+  "remote.SSH.remotePlatform": {
+    "sipvox.info": "linux"
+  },
 
   /* Terminal */
   "terminal.integrated.fontFamily": "'Fira Code'",
@@ -78,6 +82,18 @@ background: '#637a91'
   "terminal.integrated.lineHeight": 1.05,
   "terminal.integrated.defaultProfile.linux": "/usr/bin/zsh",
   "terminal.integrated.defaultProfile.osx": "/bin/zsh",
+  
+  /* Window */
+  "window.menuBarVisibility": "toggle",
+  
+  /* Workbench */
+  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "Dracula",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.editor.labelFormat": "short",
+  "workbench.startupEditor": "newUntitledFile",
+  
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 
   /* --- Extensions --- */
 
@@ -88,13 +104,17 @@ background: '#637a91'
   
   /* Colorize */
   "colorize.languages": ["javascript", "typescript"],
+  "colorize.hide_current_line_decorations": false,
 
   /* Emmet */
   "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact",
+    "php": "php"
   },
   "emmet.syntaxProfiles": {
-    "javascript": "jsx"
+    "javascript": "jsx",
+    "typescript": "tsx"
   },
   
   /* Error Lens */
@@ -110,8 +130,109 @@ background: '#637a91'
   
   /* Prettier */
   "prettier.useEditorConfig": true,
-}
 
+//******************************************************
+
+  /* PHP */
+  "[php]": {
+    "editor.defaultFormatter": "junstyle.php-cs-fixer"
+  },
+  "php.suggest.basic": false,
+  "editor.quickSuggestions": {
+    "comments": true
+  },
+
+  /* php cs fixer */
+  "php-cs-fixer.onsave": true,
+  "php-cs-fixer.formatHtml": true,
+  "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+  "php-cs-fixer.config": ".php_cs",
+  "php-cs-fixer.lastDownload": 1620387021169,  
+
+  /* Blade */
+  "[blade]": {
+    "editor.defaultFormatter": "onecentlin.laravel-blade",
+    "editor.formatOnSave": true
+  },
+  "blade.format.enable": true, // if you would like to enable blade format
+
+  /* Intelephense*/
+  "intelephense.diagnostics.run": "onSave",
+  "intelephense.environment.phpVersion": "8.0.0",
+  "intelephense.stubs": [
+    "apache",
+    "bcmath",
+    "bz2",
+    "calendar",
+    "com_dotnet",
+    "Core",
+    "ctype",
+    "curl",
+    "date",
+    "dba",
+    "dom",
+    "enchant",
+    "exif",
+    "FFI",
+    "fileinfo",
+    "filter",
+    "fpm",
+    "ftp",
+    "gd",
+    "gettext",
+    "gmp",
+    "hash",
+    "iconv",
+    "imap",
+    "intl",
+    "json",
+    "ldap",
+    "libxml",
+    "mbstring",
+    "meta",
+    "mysqli",
+    "oci8",
+    "odbc",
+    "openssl",
+    "pcntl",
+    "pcre",
+    "PDO",
+    "pdo_ibm",
+    "pdo_mysql",
+    "pdo_pgsql",
+    "pdo_sqlite",
+    "pgsql",
+    "Phar",
+    "posix",
+    "pspell",
+    "readline",
+    "Reflection",
+    "session",
+    "shmop",
+    "SimpleXML",
+    "snmp",
+    "soap",
+    "sockets",
+    "sodium",
+    "SPL",
+    "sqlite3",
+    "standard",
+    "superglobals",
+    "sysvmsg",
+    "sysvsem",
+    "sysvshm",
+    "tidy",
+    "tokenizer",
+    "xml",
+    "xmlreader",
+    "xmlrpc",
+    "xmlwriter",
+    "xsl",
+    "Zend OPcache",
+    "zip",
+    "zlib",
+    "mysql"
+  ],
 }
 
 ```
