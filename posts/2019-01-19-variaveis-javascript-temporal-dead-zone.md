@@ -8,7 +8,6 @@ thumbnail: /assets/img/js.jpeg
 category: js
 background: '#d6ba32'
 ---
-
 Olá devs,
 
 Vamos ver aqui as principais diferenças ao criar variáveis em JavaScript utilizando, _const, var_ e _let_, como já falado no subtítulo rs.
@@ -78,9 +77,9 @@ Nesse caso sim retorna erro dizendo que não podemos redeclarar a _const_:
 
 ![](/assets/img/console4.png)
 
-Então, é importante entendermos que a variável declarada com ```const``` não conseguimos redeclarar, mas, a propriedade do objeto declarado com ```const``` sim podemos reescrever, sendo assim não podemos dizer que ela é imutável.
+Então, é importante entendermos que a variável declarada com `const` não conseguimos redeclarar, mas, a propriedade do objeto declarado com `const` sim podemos reescrever, sendo assim não podemos dizer que ela é imutável.
 
-Para podermos dizer que uma variável é imutável poderíamos utilizar o **_Object.freeze_**.
+Para podermos dizer que uma variável é imutável poderíamos utilizar o _**Object.freeze**_.
 
 ```javascript
 const letter = {
@@ -98,7 +97,7 @@ Agora sim, repare que ele congelou o objeto e ignorou ao tentarmos redefinir _se
 
 Agora nesse caso podemos dizer que é uma variável imutável, pois não conseguimos redeclarar e nem reescrever as suas propriedades.
 
----
+- - -
 
 ## var
 
@@ -151,7 +150,7 @@ Definimos a variável antes da função, dentro do bloco da função atribuímos
 
 Isso acontece porque definimos a variável de forma global e mesmo que uma função, por exemplo, atribua um valor a essa variável, conseguimos chamar sem problema. É um pouco complicado e temos que tomar cuidado, porque se tivermos variáveis de mesmo nome definidas como globais e outras funções estiverem alterando essa variável, podemos fazer uma grande bagunça, também por isso foram implementados _let_ e _const_ para melhorar a forma de declararmos uma variável de acordo com a necessidade do projeto.
 
----
+- - -
 
 ## let
 
@@ -202,7 +201,7 @@ O resultado foi esse:
 
 Viu só? Foi isso mesmo que aconteceu. A palavra chave let manteve o valor da variável somente no escopo do bloco em que ela foi declarada.
 
----
+- - -
 
 ## Temporal Dead Zone
 
@@ -245,8 +244,8 @@ Então, **Temporal Dead Zone** nos ajuda a identificar erros como se o código n
 
 Portanto, as variáveis com _let_ e _const_, não sobem com _Hoisting_, o erro já aparece logo de cara rs.
 
----
+- - -
 
-Por hoje era isso galera, fique a vontade para deixar sua opinião e trocarmos uma idéia!
+Por hoje era isso galera, fique a vontade para trocarmos uma idéia!
 
 Valeu!
